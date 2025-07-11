@@ -1,69 +1,124 @@
-# React + TypeScript + Vite
+# KampfPortal - React Todo Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive Todo application built with React, TypeScript, and Tailwind CSS. This application provides a clean and intuitive interface for managing your daily tasks.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Add, edit, and delete tasks
+- ✅ Mark tasks as complete/incomplete
+- ✅ Clean, modern UI with Tailwind CSS
+- ✅ Responsive design for all devices
+- ✅ Local storage persistence
+- ✅ TypeScript for type safety
+- ✅ Component-based architecture
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: React 19.1.0
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4.1.11
+- **Build Tool**: Vite 7.0.0
+- **UI Components**: Shadcn UI
+- **Icons**: Lucide React & React Icons
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Before you begin, ensure you have the following installed on your system:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Node.js** (version 18.0 or higher)
+- **npm** (version 8.0 or higher) or **yarn** (version 1.22 or higher)
+
+### Check Your Node.js Version
+
+```bash
+node --version
+npm --version
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+If you don't have Node.js installed, download it from [nodejs.org](https://nodejs.org/).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Installation
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/chef0111/todo-react.git
+cd todo-react
 ```
+
+### 2. Install Dependencies
+
+Using npm:
+```bash
+npm install
+```
+
+## Running the Application
+
+### Development Mode
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+### Production Build
+
+To build the application for production:
+
+```bash
+npm run build
+```
+
+This will:
+- Compile TypeScript
+- Bundle and optimize your code
+- Create a `dist` folder with production-ready files
+
+### Preview Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+todo-react/
+├── public/                 # Static assets
+│   └── vite.svg
+├── src/
+│   ├── components/         # React components
+│   │   ├── ui/            # Reusable UI components
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── TodoApp.tsx    # Main todo application
+│   │   └── TodoItem.tsx   # Individual todo item
+│   ├── hooks/             # Custom React hooks
+│   │   └── useLocalStorage.ts
+│   ├── lib/               # Utility functions
+│   │   └── utils.ts
+│   ├── assets/            # Images and icons
+│   ├── App.tsx            # Main App component
+│   ├── main.tsx           # Entry point
+│   └── index.css          # Global styles
+├── package.json           # Dependencies and scripts
+├── vite.config.ts         # Vite configuration
+├── tsconfig.json          # TypeScript configuration
+└── tailwind.config.js     # Tailwind CSS configuration
+```
+
+## Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+```
+
+Enjoy building with KampfPortal! 🚀

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { FaPlus } from "react-icons/fa6"
+import { Button } from "./ui/button"
 
 interface HeaderProps {
   onAddTodo: (text: string) => void
@@ -31,7 +32,7 @@ export function Header({ onAddTodo, filter, onFilterChange }: HeaderProps) {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center w-full">
+    <div className="flex flex-col justify-center items-center w-full pb-4">
       <div className="flex flex-col justify-center items-center pb-4">
         <h1 className="text-white text-2xl md:text-3xl font-bold pb-4">Todo List</h1>
         <label className="mt-[-10px] text-sub-text">Keep track of your tasks</label>
@@ -48,12 +49,12 @@ export function Header({ onAddTodo, filter, onFilterChange }: HeaderProps) {
             autoComplete="off"
             className="bg-secondary text-white flex-grow h-9 md:h-10 rounded-md border-none mr-2 transition-all duration-300 ease-in-out focus:outline-none focus:brightness-120 placeholder:text-sub-text"
           />
-            <button
+            <Button
             type="submit"
             className="bg-white text-xl flex items-center justify-center min-w-9 h-9 rounded-sm border-none cursor-pointer transition-all duration-300 ease-in-out hover:scale-105"
             >
               <FaPlus className="text-black" />
-            </button>
+            </Button>
         </div>
 
         <div className="bg-secondary rounded-md py-[6px] px-0 flex flex-row w-full justify-evenly items-center shadow-[inset_0_0_6px_1px_rgba(0,0,0,0.5)]">
