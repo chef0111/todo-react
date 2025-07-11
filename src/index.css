@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark theme colors matching the original CSS exactly */
+  --color-background: #121212;
+  --color-primary: #0b0d10;
+  --color-secondary: #18191b;
+  --color-accent: #4f5257;
+  --color-accent1: #232426;
+  --color-red-accent: #ff0033;
+  --color-blue-accent: #0091ff;
+  --color-text: #ffffff;
+  --color-sub-text: #a6a6a6;
+  --color-animate-red: #ff5000;
+  --color-animate-blue: #0073ff;
+
+  --font-family-sans: "Inter", system-ui, sans-serif;
+}
+
+* {
+  color-scheme: dark;
+}
